@@ -1,0 +1,1 @@
+Medical-grade stethoscope v2.0 by Tareko on Thingiverse: https://www.thingiverse.com/thing:2826304
