@@ -4,5 +4,9 @@ from flask import Flask, request, render_template
 def create_app():
 
 	app = Flask(__name__)
-	from . import webapp
+
+	@app.route('/')
+	def home():
+    	return render_template('index.html')
+    	
 	return app
