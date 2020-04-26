@@ -2,65 +2,53 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>PSU CAPSTONE</title>
+	<title>Home Auscultation</title>
 
-	<script src="static/audiodisplay.js"></script>
-	<script src="static/recorder.js"></script>
-	<script src="static/main.js"></script>
-	<style>
-	html { }
-	body { 
-		font: 14pt Arial, sans-serif; 
-		background: lightgray;
-		height: 100vh;
-		width: 100%;
-	}
-	canvas {
-		background: #202020; 
-		width: 100%;
-		height: 50%;
-	}
-	h1{
-		text-align: center;
-	}
+	<script src="static/scripts/audiodisplay.js"></script>
+	<script src="static/scripts/recorder.js"></script>
+	<script src="static/scripts/main.js"></script>
 
-	#record {  }
-	#record.recording { 
-		background: red;
-		background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-		background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-		background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-	}
-	#save[download] { opacity: 1;}
-	#top{
-		height: 10vh;
-		width: 100%;
-	}
-	#viz {
-		height: 80vh;
-		width: 80%;
-	}
-	#controls {
-		height: 10vh;
-		width: 100%;
-	}
-
-
-	</style>
+	<link rel="stylesheet" href='/static/css/main.css'>
 </head>
 <body>
 	<div id="webapp">
-		<header id="top">
-			<h1> BME450 Stethoscope Webapp </h1>
+		<header id="header">
+			<!--<img src="static/logo.png" alt="Penn State Logo" height="100vh" />-->
+			<img src="static/images/logo.png" alt="Penn State Logo" width=150px align="left" />
+			<h1 id="title">  COVID-19 Home Auscultation </h1>
 		</header>
-		<div id="viz">
-			<canvas id="analyser" width="1024" height="300"></canvas>
-			<canvas id="wavedisplay" width="1024" height="300"></canvas>
+		<div id="main">
+			<div id="visual">
+				<img id="human" src="static/images/diagram.png" alt="I hate capstone"  height=100%/>
+			</div>
+			<div id="center">
+				<canvas id="walkthrough"></canvas>
+			</div>
+			<aside id="menu">
+				<button id="begin" class="menubutton">Begin Auscultation</button>
+				<button id="help" href="#" class="menubutton">Need Help?</button>
+				<button id="resources" class="menubutton">COVID-19 Resources</button>
+				<button id="continue" onclick="continue_first(this)" class = "menubutton"><a id="download" href="#">Continue...</a></button>
+			</aside>
 		</div>
-		<footer id="controls">
-			<button id="record"  onclick="toggleRecording(this);">Toggle Record</button>
-			<button><a id="save" href="#">Save sound file</a></button>
+		<div id="visualizer">
+			<canvas id="analyser" width="1024"></canvas>
+		</div>
+		<footer id="footer">
+			<script src="static/scripts/setup.js"></script>
+			<!--<button id="record"  onclick="toggleRecording(this);">Toggle Record</button>
+			<button><a id="save" href="#">Save sound file</a></button>-->
 		</footer>
 	</div>
 </body>
+<section>
+	<img id="unplugged" src="/static/images/trrs0.jpg" />
+	<img id="plugged" src="/static/images/trrs1.jpg" />
+	<img id="pos0" src="/static/images/pos0.jpg" />
+	<img id="pos1" src="/static/images/pos1.jpg" />
+	<img id="pos2" src="/static/images/pos2.jpg" />
+	<img id="pos3" src="/static/images/pos3.jpg" />
+
+</section>
+
 </html>

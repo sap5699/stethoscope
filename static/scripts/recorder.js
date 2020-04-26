@@ -19,7 +19,7 @@ DEALINGS IN THE SOFTWARE.
 
 (function(window){
 
-  var WORKER_PATH = 'static/scripts/recorderWorker.js';
+  var WORKER_PATH = 'static/recorderWorker.js';
 
   var Recorder = function(source, cfg){
     var config = cfg || {};
@@ -108,9 +108,11 @@ DEALINGS IN THE SOFTWARE.
 
   Recorder.setupDownload = function(blob, filename){
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
-    var link = document.getElementById("save");
+    console.log(url);
+    var link = document.getElementById("download");
     link.href = url;
     link.download = filename || 'output.wav';
+    console.log("here");
   }
 
   window.Recorder = Recorder;
