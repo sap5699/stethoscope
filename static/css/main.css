@@ -1,0 +1,141 @@
+body { 
+	font: 14pt Arial, sans-serif; 
+	background: white;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+
+#header{
+	height: 8vh;
+	width: 100%;
+	background-color: white;
+}
+#main{
+	height: 52vh;
+	width: 100%;
+}
+#visualizer{
+	height: 40vh;
+	width: 100%;
+}
+#footer{
+	height: 0vh;
+	width: 100%;
+}
+
+#title{
+	color: #1f417b;
+	padding-left: 350px;
+}
+
+#visual{
+	display: inline-block;
+	height: 100%;
+	width:50%;
+	float:left;
+	background:white;
+
+}
+#center{
+	display:inline-flex;
+	float: none;
+	height:100%;
+}
+#menu{
+	display: inline-block;
+	height: 100%;
+	background: white;
+	float: right;
+	width: 20%;
+	position:relative;
+}
+
+
+
+
+#human{
+	background-size: 100% 100%;
+
+}
+
+#continue{
+	float: right;
+	position:absolute;
+	bottom: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition:  0.5s, opacity 3s;
+}
+
+
+
+
+
+
+.menubutton{
+	display: block;
+	width: 85%;
+	color: white;
+	background-color: #1f417b;
+	padding: 16px;
+	text-decoration: none;
+	font-size: 18px;
+	border-radius: 0px;
+	border: 1px solid white;
+	float:right;
+	transition-duration: .5s;
+}
+
+.menubutton:hover {
+	cursor: pointer;
+	width:100%;
+}
+
+.menubutton:hover::after{
+	content:"    \00bb";
+}
+
+.menubutton:active{
+	background-color: #0f203c;
+}
+
+#walkthrough{
+	background-color: white;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+#analyser {
+	background: #202020; 
+	width: 100%;
+	height: 100%;
+}
+
+#record {  }
+#record.recording { 
+	background: red;
+	background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+	background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+	background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+}
+#save[download] { opacity: 1;}
+#download:link{
+	opacity: 1;
+	color: white;
+	text-decoration: none;
+}
+#download:visited{
+	color: white;
+	text-decoration: none;
+}
+#download:hover{
+	color: white;
+	text-decoration: none;
+}
+#download:active{
+	color: white;
+	text-decoration: none;
+}
