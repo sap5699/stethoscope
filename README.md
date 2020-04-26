@@ -1,5 +1,5 @@
 # stethoscope
-Low cost electronic stethoscope for remote auscultations in times of social distancing.  The physical hardware, is a simple microphone circuit with a 3D printable or cheaply bought stethoscope bell. The device is plugged into the headset jack of a computer and recognized by the software, which is an easily accessible website that guides a user through the process.
+Low cost electronic stethoscope for remote auscultations in times of social distancing.  The physical hardware, is a simple microphone circuit with a 3D printable or cheaply bought stethoscope bell. The device is plugged into the headset jack of a computer and recognized by the software, which is an easily accessible website that guides a user through the process. The webapp is hosted [here](https://stethoscope-api-heroku.herokuapp.com/).
 
 ### To install:
 Clone the repository by downloading or running 
