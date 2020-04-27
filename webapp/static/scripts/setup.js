@@ -4,6 +4,9 @@ var center = document.getElementById("center");
 var windowWidth = window.innerWidth;
 var menu = document.getElementById("menu");
 var beginButton = document.getElementById("begin");
+var historyButton = document.getElementById("history");
+var historyForm = document.getElementById("historyForm");
+var historySubmitBtn = document.getElementById("submitForm");
 var mainCanvas = document.getElementById("walkthrough");
 var continueButton = document.getElementById("continue");
 var mainContext = mainCanvas.getContext("2d");
@@ -53,7 +56,7 @@ beginButton.onclick = function(){
 
 	mainContext.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
 
-	mainContext.font = "30px"
+	mainContext.font = "30px";
 	mainContext.fillText("First, let's get you setup.", 10,50);
 	mainContext.fillText("Plug the stethoscope into your computer's headset jack as shown", 10,80);
 
@@ -72,6 +75,17 @@ beginButton.onclick = function(){
 	interval = setInterval(changePlugImage, 1000);
 };
 
+
+historyButton.onclick = function() {
+    mainCanvas.style.display = "none";
+    historyForm.style.display = "block";
+}
+
+historySubmitBtn.onclick = function() {
+    historyForm.style.display = "none";
+    mainCanvas.style.display = "block";
+    setupCanvas;
+}
 
 function changePlugImage(){
 	var unplugged = document.getElementById("unplugged");
@@ -205,8 +219,8 @@ function cleanup(){
 	stevenContext.fillStyle = "black";
 	stevenContext.clearRect(0,0,stevenCanvas.width, stevenCanvas.height);
 	stevenContext.fillText("Thank you for helping to flatten the curve.", 10, 50);
-	stevenContext.fillText("Please practice all social distancing guidelines listed in 'COVID-19 Resources'", 10, 80);
-	stevenContext.fillText("Download your ascultation by pressing 'Continue'", 10, stevenCanvas.height-50);
+	stevenContext.fillText("Please practice all social distancing guidelines listed in 'CDC Resources'", 10, 80);
+	stevenContext.fillText("Download your auscultation by pressing 'Continue'", 10, stevenCanvas.height-50);
 
 	toggleRecording(htmlthis);
 	console.log('here');
