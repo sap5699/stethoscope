@@ -210,7 +210,8 @@ function cleanup(){
 
 	toggleRecording(htmlthis);
 	console.log('here');
+	document.getElementById("download").onclick="donothing";
 }
 function donothing(){
-
+	console.log("nothing happened");
 }

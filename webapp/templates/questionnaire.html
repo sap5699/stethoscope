@@ -4,10 +4,80 @@
 </head>
 <body>
 	<header> 
-		<h1> COVID-19 Questionnaire </h1>
+		<h1 id="title"> Patient Questionnaire </h1>
 	</header>
 	<div>
 		<form>
+			<label for="age">What best describes your age?</label><br>
+			<input type="radio" id="kid" name="age" value="kid">
+			<label for="kid">Under 18</label><br>
+			<input type="radio" id="adult" name="age" value="adult">
+			<label for="adult">Between 18 and 64</label><br>
+			<input type="radio" id="geezer" name="age" value="geezer">
+			<label for="geezer">65 or Older</label><br>
+
+			<br>
+
+			<label for="symptoms">Are you experiencing any of these symptoms?</label><br>
+			<input type="checkbox" id="fcs" name="fcs" value="fcs">
+			<label for="fcs">Fever, chills, or sweating</label><br>
+			<input type="checkbox" id="db" name="db" value="db">
+			<label for="db">Difficulty Breathing</label><br>
+			<input type="checkbox" id="nwc" name="nwc" value="nwc">
+			<label for="nwc">New or worsening cough</label><br>
+			<input type="checkbox" id="st" name="st" value="st">
+			<label for="st">Sore throat</label><br>
+			<input type="checkbox" id="atb" name="atb" value="atb">
+			<label for="atb">Aching throughout the body</label><br>
+			<input type="checkbox" id="vd" name="vd" value="vd">
+			<label for="vd">Vomiting or diarrhea</label><br>
+			<input type="checkbox" id="ntb" name="ntb" value="ntb">
+			<label for="ntb">None of the above</label><br>
+
+			<br>
+
+			<label for="conditions">Do any of these apply to you?</label><br>
+			<input type="checkbox" id="asm" name="asm" value="asm">
+			<label for="asm">Moderate to severe asthma or chronic lung disease</label><br>
+			<input type="checkbox" id="cnr" name="cnr" value="cnr">
+			<label for="cnr">Cancer treatment or medicines causing immune suppression</label><br>
+			<input type="checkbox" id="hiv" name="hiv" value="hiv">
+			<label for="hiv">Inherited immune system deficiencies or HIV</label><br>
+			<input type="checkbox" id="hrt" name="hrt" value="hrt">
+			<label for="hrt">Serious heart conditions, such as heart failure or prior heart attack</label><br>
+			<input type="checkbox" id="dbt" name="dbt" value="dbt">
+			<label for="dbt">Diabetes with complications</label><br>
+			<input type="checkbox" id="kf" name="kf" value="kf">
+			<label for="kf">Kidney failure that needs dialysis</label><br>
+			<input type="checkbox" id="lvr" name="lvr" value="lvr">
+			<label for="lvr">Cirrhosis of the liver</label><br>	
+			<input type="checkbox" id="cof" name="cof" value="cof">
+			<label for="cof">Diseases or conditions that make it harder to cough</label><br>
+			<input type="checkbox" id="oby" name="oby" value="oby">
+			<label for="oby">Extreme Obesity</label><br>
+			<input type="checkbox" id="prg" name="prg" value="prg">
+			<label for="prg">Pregnancy</label><br>
+			<input type="checkbox" id="ntb2" name="ntb2" value="ntb2">
+			<label for="st">None of the above</label><br>
+
+			<br>
+
+			<label for="trav">In the past 14 days have you traveled internationally?</label><br>
+			<input type="radio" id="ytrav" name="trav" value="ytrav">
+			<label for="ytrav">I have traveled internationally</label><br>
+			<input type="radio" id="ntrav" name="trav" value="ntrav">
+			<label for="ntrav">I have not traveled internationally</label><br>
+
+			<br>
+			<label for="loc">Where are you currently practicing social distancing?</label><br>
+			<label for="county">County:</label><br>
+			<input type="text" id="county" name="county"><br>
+			<label for="state">State:</label><br>
+			<input type="text" id="state" name="state"><br>
+
+			<br>
+
+			<button type="button" id="thanks" class="menubutton" onclick="location.href='/'">I'm done!</button>
 		</form>
 	</div>
 </body>
