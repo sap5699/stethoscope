@@ -23,7 +23,7 @@ var pos=0;
 var radius = 100;
 var counting=0;
 var count = 0;
-var MAXCOUNT = 3;
+var MAXCOUNT = 5;
 
 mainCanvas.width=1000;
 mainCanvas.height=500;
@@ -99,7 +99,7 @@ function continue_first(e){
 
 	mainContext.fillText("Practice as long as you need, then hit 'Continue'", 10, mainCanvas.height - 30);
 	continueButton.onclick = continue_second;
-	interval = setInterval(updateCircle, 10);
+	interval = setInterval(updateCircle, 50);
 };
 
 function updateCircle(){
